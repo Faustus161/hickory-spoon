@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Hickory Spoon — Aumsville, Oregon</title>
+<meta name="description" content="A full-service restaurant and bar at Santiam Golf Club in Aumsville, Oregon. Dining, drinks, private events, and catering." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --cream:      #f8f5f0;
+  --cream-deep: #ede9e0;
+  --green:      #243d31;
+  --green-mid:  #325444;
+  --green-lt:   #e4ede8;
+  --copper:     #a86b2e;
+  --copper-lt:  #f2e6d5;
+  --bark:       #3d2b1f;
+  --text:       #1c1c1a;
+  --muted:      #58564f;
+  --faint:      #a09b91;
+  --line:       rgba(36,61,49,0.12);
+  --line-soft:  rgba(36,61,49,0.06);
+  --r: 0.5rem;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', -apple-system, sans-serif; background: var(--cream); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+img { display: block; width: 100%; height: 100%; object-fit: cover; }
+a { color: inherit; text-decoration: none; }
+h1,h2,h3,.serif { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; letter-spacing: -0.01em; }
+h1 { font-size: clamp(2.6rem,5.5vw,4.4rem); line-height: 1.05; }
+h2 { font-size: clamp(1.8rem,3.5vw,2.8rem); line-height: 1.1; }
+h3 { font-size: clamp(1.15rem,2vw,1.45rem); line-height: 1.2; }
+.eyebrow { font-family:'Inter',sans-serif; font-size:.68rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--copper); }
+p { color: var(--muted); line-height: 1.8; font-size: .97rem; }
+.wrap   { max-width:1200px; margin:0 auto; padding:0 2rem; }
+.wrap-sm{ max-width:880px;  margin:0 auto; padding:0 2rem; }
+section { padding: 5.5rem 0; }
+
+/* BUTTONS */
+.btn { display:inline-flex; align-items:center; gap:.35rem; font-family:'Inter',sans-serif; font-size:.8rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase; padding:.8rem 1.75rem; border-radius:var(--r); cursor:pointer; transition:all .2s; }
+.btn-green  { background:var(--green); color:#fff; border:1.5px solid var(--green); }
+.btn-green:hover  { background:var(--green-mid); border-color:var(--green-mid); }
+.btn-ghost  { background:transparent; color:var(--green); border:1.5px solid var(--line); }
+.btn-ghost:hover  { border-color:var(--green); background:var(--green-lt); }
+.btn-white  { background:#fff; color:var(--green); border:1.5px solid #fff; }
+.btn-white:hover  { background:var(--cream); }
+.btn-owh    { background:transparent; color:#fff; border:1.5px solid rgba(255,255,255,.4); }
+.btn-owh:hover    { background:rgba(255,255,255,.1); border-color:rgba(255,255,255,.7); }
+
+/* NAV */
+nav { position:sticky; top:0; z-index:100; background:rgba(248,245,240,.96); backdrop-filter:blur(8px); border-bottom:1px solid var(--line-soft); }
+.nav-inner { display:flex; align-items:center; justify-content:space-between; max-width:1200px; margin:0 auto; padding:0 2rem; height:80px; }
+.nav-logo { display:flex; align-items:center; gap:1rem; text-decoration:none; }
+.nav-logo img { width:auto; height:64px; object-fit:contain; flex-shrink:0; }
+.nav-logo-text { display:flex; flex-direction:column; }
+.nav-logo-name { font-family:'Cormorant Garamond',serif; font-size:1.35rem; font-weight:500; color:var(--text); line-height:1.1; }
+.nav-logo-sub  { font-family:'Inter',sans-serif; font-size:.6rem; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:var(--faint); margin-top:.2rem; }
+.nav-links { display:flex; align-items:center; gap:.15rem; list-style:none; }
+.nav-links a { font-family:'Inter',sans-serif; font-size:.78rem; font-weight:500; color:var(--muted); padding:.4rem .75rem; border-radius:var(--r); transition:color .15s,background .15s; }
+.nav-links a:hover { color:var(--text); background:var(--green-lt); }
+.nav-cta { margin-left:.75rem; }
+
+/* HERO */
+.hero { display:grid; grid-template-columns:1fr 1fr; min-height:88vh; }
+.hero-text { display:flex; flex-direction:column; justify-content:center; padding:clamp(3rem,6vw,7rem) clamp(2rem,5vw,5rem); background:var(--cream); }
+.hero-text h1 { margin-top:1.25rem; color:var(--green); }
+.hero-text h1 em { font-style:italic; color:var(--bark); }
+.hero-lead { font-size:1.05rem; color:var(--muted); margin-top:1.5rem; line-height:1.75; max-width:380px; }
+.hero-btns { display:flex; gap:.75rem; flex-wrap:wrap; margin-top:2.5rem; }
+.hero-meta { display:flex; flex-direction:column; gap:.4rem; margin-top:2.75rem; padding-top:2rem; border-top:1px solid var(--line); }
+.hero-meta-row { font-size:.8rem; color:var(--faint); display:flex; align-items:center; gap:.5rem; }
+.hero-meta-row strong { color:var(--muted); font-weight:500; }
+.hero-photo { position:relative; overflow:hidden; }
+.hero-photo img { position:absolute; inset:0; }
+.hero-photo::after { content:''; position:absolute; inset:0; background:linear-gradient(135deg,rgba(36,61,49,.15),rgba(36,61,49,0)); pointer-events:none; }
+
+/* INFO STRIP */
+.info-strip { background:var(--green); }
+.info-strip-inner { max-width:1200px; margin:0 auto; padding:0 2rem; display:grid; grid-template-columns:repeat(3,1fr); border-left:1px solid rgba(255,255,255,.08); }
+.info-item { padding:1.6rem 2rem; border-right:1px solid rgba(255,255,255,.08); display:flex; flex-direction:column; gap:.25rem; }
+.info-label { font-size:.6rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.45); }
+.info-value { font-family:'Cormorant Garamond',serif; font-size:1.05rem; color:#fff; line-height:1.4; }
+.info-sub   { font-size:.75rem; color:rgba(255,255,255,.5); margin-top:.1rem; }
+
+/* STORY */
+.story-grid { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; }
+.story-photo { aspect-ratio:4/5; border-radius:.75rem; overflow:hidden; }
+.story-content .eyebrow { display:block; margin-bottom:1.25rem; }
+.story-content h2 { color:var(--green); margin-bottom:1.5rem; }
+.story-content p+p { margin-top:1rem; }
+.story-detail { margin-top:2rem; padding:1.5rem; background:var(--green-lt); border-radius:var(--r); border-left:3px solid var(--green); }
+.story-detail p { font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-style:italic; color:var(--green); line-height:1.6; }
+.story-link { display:inline-flex; align-items:center; gap:.4rem; margin-top:2rem; font-size:.82rem; font-weight:600; letter-spacing:.04em; color:var(--copper); text-transform:uppercase; }
+.story-link:hover { color:var(--bark); }
+
+/* HAPPY HOUR BAND */
+.hh-band { background:var(--green); padding:3.5rem 0; }
+.hh-band-inner { max-width:1200px; margin:0 auto; padding:0 2rem; display:grid; grid-template-columns:1fr auto; gap:3rem; align-items:center; }
+.hh-left .eyebrow { display:block; color:rgba(255,255,255,.5); margin-bottom:.75rem; }
+.hh-left h2 { color:#fff; font-size:clamp(1.6rem,3vw,2.4rem); }
+.hh-left p { color:rgba(255,255,255,.65); margin-top:.75rem; font-size:.95rem; }
+.hh-items { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:rgba(255,255,255,.08); border-radius:.5rem; overflow:hidden; margin-top:2rem; }
+.hh-item { background:rgba(255,255,255,.04); padding:1rem 1.25rem; }
+.hh-item-name { color:#fff; font-weight:500; font-size:.9rem; }
+.hh-item-price { color:var(--copper); font-size:.82rem; font-weight:600; margin-top:.15rem; }
+.hh-item-desc { color:rgba(255,255,255,.45); font-size:.78rem; margin-top:.2rem; line-height:1.4; }
+.hh-drinks { background:rgba(255,255,255,.06); border-radius:.5rem; padding:1.5rem; margin-top:1.5rem; }
+.hh-drinks-title { font-size:.62rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,.35); margin-bottom:.85rem; }
+.hh-drink-row { display:flex; justify-content:space-between; padding:.45rem 0; border-bottom:1px solid rgba(255,255,255,.06); font-size:.85rem; }
+.hh-drink-row:last-child { border-bottom:none; }
+.hh-drink-name { color:rgba(255,255,255,.75); }
+.hh-drink-price { color:var(--copper); font-weight:600; }
+.hh-cta { display:flex; flex-direction:column; gap:1rem; align-items:flex-start; min-width:220px; }
+.hh-badge { background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.15); border-radius:.75rem; padding:1.75rem; text-align:center; }
+.hh-badge-time { font-family:'Cormorant Garamond',serif; font-size:2.6rem; color:#fff; line-height:1; }
+.hh-badge-label { font-size:.65rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,.4); margin-top:.4rem; }
+
+/* MENU SECTION */
+.menu-section { background:var(--cream-deep); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.menu-tabs { display:flex; gap:0; border-bottom:1px solid var(--line); margin-bottom:3rem; flex-wrap:wrap; }
+.menu-tab { font-family:'Inter',sans-serif; font-size:.78rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase; padding:.85rem 1.5rem; cursor:pointer; border:none; background:transparent; color:var(--faint); border-bottom:2.5px solid transparent; margin-bottom:-1px; transition:color .15s,border-color .15s; }
+.menu-tab.active { color:var(--green); border-bottom-color:var(--green); }
+.menu-tab:hover:not(.active) { color:var(--muted); }
+.menu-panel { display:none; }
+.menu-panel.active { display:block; }
+.menu-note { font-size:.8rem; color:var(--faint); font-style:italic; margin-bottom:2rem; }
+.menu-grid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--line-soft); border:1px solid var(--line-soft); border-radius:.75rem; overflow:hidden; }
+.menu-item { background:var(--cream); padding:1.5rem 1.75rem; display:flex; flex-direction:column; gap:.35rem; }
+.menu-item:hover { background:var(--cream-deep); }
+.menu-item-header { display:flex; justify-content:space-between; align-items:baseline; gap:1rem; }
+.menu-item-name { font-family:'Cormorant Garamond',serif; font-size:1.15rem; color:var(--text); font-weight:500; }
+.menu-item-price { font-family:'Inter',sans-serif; font-size:.85rem; font-weight:600; color:var(--copper); white-space:nowrap; }
+.menu-item-desc { font-size:.84rem; color:var(--faint); line-height:1.6; }
+.menu-item-add { font-size:.76rem; color:var(--green); font-style:italic; margin-top:.15rem; }
+.menu-item.featured .menu-item-name::before { content:'★ '; color:var(--copper); font-size:.8em; }
+.menu-section-sub { font-size:.62rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--green); background:var(--green-lt); padding:.6rem 1.75rem; grid-column:1/-1; }
+
+/* BAR SECTION */
+.bar-section { background:var(--bark); }
+.bar-header { margin-bottom:3rem; }
+.bar-header .eyebrow { display:block; color:rgba(255,255,255,.4); margin-bottom:1rem; }
+.bar-header h2 { color:#fff; }
+.bar-header p { color:rgba(255,255,255,.55); margin-top:.75rem; max-width:520px; }
+.bar-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:1.5rem; }
+.bar-card { background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08); border-radius:.75rem; padding:1.75rem; }
+.bar-card-title { font-size:.62rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.3); margin-bottom:1.25rem; }
+.bar-item { display:flex; flex-direction:column; gap:.15rem; padding:.6rem 0; border-bottom:1px solid rgba(255,255,255,.06); }
+.bar-item:last-child { border-bottom:none; }
+.bar-item-name { font-family:'Cormorant Garamond',serif; font-size:1.1rem; color:rgba(255,255,255,.85); }
+.bar-item-desc { font-size:.78rem; color:rgba(255,255,255,.4); line-height:1.5; }
+.bar-item-source { font-size:.72rem; color:rgba(168,107,46,.8); font-style:italic; }
+.wine-note { font-size:.72rem; color:rgba(255,255,255,.3); font-style:italic; margin-top:1.25rem; line-height:1.5; }
+
+/* QUOTE BAND */
+.quote-band { background:var(--green); padding:5rem 0; text-align:center; }
+.quote-band blockquote { font-family:'Cormorant Garamond',serif; font-size:clamp(1.6rem,3.5vw,2.6rem); font-style:italic; font-weight:300; color:rgba(255,255,255,.92); line-height:1.4; max-width:820px; margin:0 auto; }
+.quote-band blockquote::before { content:'\201C'; }
+.quote-band blockquote::after  { content:'\201D'; }
+.quote-source { font-size:.72rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.4); margin-top:1.75rem; }
+.quote-stars  { color:var(--copper); font-size:1rem; letter-spacing:.15em; margin-bottom:1.5rem; display:block; }
+
+/* GALLERY */
+.gallery-grid { display:grid; grid-template-columns:repeat(3,1fr); grid-template-rows:260px 260px; gap:.6rem; border-radius:.75rem; overflow:hidden; }
+.gallery-item { overflow:hidden; }
+.gallery-item img { transition:transform .5s ease; }
+.gallery-item:hover img { transform:scale(1.04); }
+.gallery-item:first-child { grid-row:span 2; }
+
+/* WHAT'S ON */
+.whatson-section { background:var(--cream); padding:5.5rem 0; border-top:1px solid var(--line-soft); }
+.whatson-section h2 { color:var(--green); margin-bottom:.75rem; }
+.whatson-intro { font-size:.95rem; color:var(--faint); max-width:560px; margin-bottom:3rem; }
+.whatson-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; margin-bottom:2rem; }
+.whatson-wide { grid-column:span 2; }
+.event-card { border-radius:.75rem; overflow:hidden; border:1px solid var(--line-soft); background:#fff; display:flex; flex-direction:column; }
+.event-card-header { padding:1.25rem 1.5rem 1rem; }
+.event-card-body { padding:0 1.5rem 1.5rem; flex:1; display:flex; flex-direction:column; gap:.5rem; }
+.event-tag { display:inline-block; font-size:.6rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; padding:.25rem .65rem; border-radius:999px; margin-bottom:.5rem; }
+.event-tag-recurring { background:rgba(36,61,49,.08); color:var(--green); }
+.event-tag-featured { background:var(--copper); color:#fff; }
+.event-card-title { font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-weight:600; color:var(--text); line-height:1.15; }
+.event-card-date { font-size:.8rem; font-weight:600; letter-spacing:.06em; color:var(--copper); margin-top:.1rem; }
+.event-card-desc { font-size:.88rem; color:var(--faint); line-height:1.65; flex:1; }
+.event-detail-list { list-style:none; display:flex; flex-direction:column; gap:.4rem; margin-top:.5rem; }
+.event-detail-list li { font-size:.82rem; color:var(--faint); display:flex; align-items:center; gap:.5rem; }
+.event-detail-list li::before { content:''; width:4px; height:4px; background:var(--copper); border-radius:50%; flex-shrink:0; }
+.event-card-accent { background:var(--green); }
+.event-card-accent .event-tag-recurring { background:rgba(255,255,255,.15); color:rgba(255,255,255,.75); }
+.event-card-accent .event-card-title { color:#fff; }
+.event-card-accent .event-card-date { color:rgba(255,255,255,.6); }
+.event-card-accent .event-card-desc { color:rgba(255,255,255,.6); }
+.event-card-accent .event-detail-list li { color:rgba(255,255,255,.6); }
+.event-card-accent .event-detail-list li::before { background:rgba(255,255,255,.4); }
+.weekly-strip { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line-soft); border:1px solid var(--line-soft); border-radius:.75rem; overflow:hidden; margin-top:1.25rem; }
+.weekly-item { background:#fff; padding:1.25rem 1.5rem; }
+.weekly-day { font-size:.65rem; font-weight:700; letter-spacing:.15em; text-transform:uppercase; color:var(--faint); margin-bottom:.4rem; }
+.weekly-name { font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-weight:600; color:var(--green); line-height:1.2; }
+.weekly-detail { font-size:.78rem; color:var(--faint); margin-top:.25rem; }
+
+/* EVENTS */
+.events-section { background:var(--bark); padding:5.5rem 0; }
+.events-grid { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; }
+.events-photo { aspect-ratio:3/2; border-radius:.75rem; overflow:hidden; }
+.events-content .eyebrow { display:block; margin-bottom:1.25rem; color:rgba(255,255,255,.45); }
+.events-content h2 { color:#fff; margin-bottom:1.5rem; }
+.events-content p { color:rgba(255,255,255,.65); font-size:.95rem; }
+.events-content p+p { margin-top:1rem; }
+.events-spaces { display:flex; flex-direction:column; margin-top:2rem; border:1px solid rgba(255,255,255,.1); border-radius:var(--r); overflow:hidden; }
+.space-row { display:flex; align-items:center; justify-content:space-between; padding:.9rem 1.25rem; border-bottom:1px solid rgba(255,255,255,.06); font-size:.85rem; }
+.space-row:last-child { border-bottom:none; }
+.space-name { color:rgba(255,255,255,.85); font-weight:500; }
+.space-desc { color:rgba(255,255,255,.4); font-size:.78rem; }
+.events-btns { display:flex; gap:.75rem; flex-wrap:wrap; margin-top:2.25rem; }
+
+/* REVIEWS */
+.reviews-section { background:var(--cream-deep); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.reviews-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+.review-card { background:var(--cream); border-radius:.75rem; padding:1.75rem; border:1px solid var(--line-soft); }
+.review-stars { color:#e8a820; font-size:.85rem; letter-spacing:.1em; margin-bottom:1rem; }
+.review-text { font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-style:italic; color:var(--text); line-height:1.6; }
+.review-author { margin-top:1.25rem; font-size:.75rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--faint); }
+
+/* VISIT */
+.visit-grid { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:start; }
+.visit-content .eyebrow { display:block; margin-bottom:1.25rem; }
+.visit-content h2 { color:var(--green); margin-bottom:1.5rem; }
+.hours-table { width:100%; border-collapse:collapse; margin-top:1.75rem; }
+.hours-table tr { border-bottom:1px solid var(--line); }
+.hours-table tr:last-child { border-bottom:none; }
+.hours-table td { padding:.75rem 0; font-size:.88rem; }
+.hours-table td:first-child { color:var(--muted); font-weight:500; }
+.hours-table td:last-child { text-align:right; color:var(--faint); }
+.hours-note { font-size:.72rem; color:var(--faint); margin-top:.75rem; }
+.visit-card { background:var(--green); border-radius:.75rem; overflow:hidden; }
+.visit-map-placeholder { height:200px; background:var(--green-mid); position:relative; overflow:hidden; }
+.visit-map-link { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-family:'Inter',sans-serif; font-size:.75rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.7); background:rgba(36,61,49,.3); transition:background .2s; }
+.visit-map-link:hover { background:rgba(36,61,49,.5); }
+.visit-details { padding:1.75rem; display:flex; flex-direction:column; gap:1.25rem; }
+.visit-row { display:flex; flex-direction:column; gap:.2rem; }
+.visit-row-label { font-size:.6rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,.35); }
+.visit-row-value { font-size:.92rem; color:rgba(255,255,255,.85); }
+.visit-row-value a { color:rgba(255,255,255,.85); text-decoration:underline; text-underline-offset:2px; }
+.visit-row-value a:hover { color:#fff; }
+.visit-sep { height:1px; background:rgba(255,255,255,.08); }
+.visit-actions { display:flex; flex-direction:column; gap:.6rem; margin-top:.25rem; }
+.visit-actions .btn { justify-content:center; width:100%; }
+
+/* CTA */
+.cta-section { background:var(--cream-deep); border-top:1px solid var(--line); text-align:center; }
+.cta-section .eyebrow { display:block; margin-bottom:1.25rem; }
+.cta-section h2 { color:var(--green); max-width:600px; margin:0 auto 1.25rem; }
+.cta-section p { max-width:500px; margin:0 auto; }
+.cta-btns { display:flex; gap:.75rem; justify-content:center; flex-wrap:wrap; margin-top:2.5rem; }
+
+/* FOOTER */
+footer { background:var(--green); color:rgba(255,255,255,.6); padding:4rem 0 2.5rem; }
+.footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:3rem; max-width:1200px; margin:0 auto; padding:0 2rem; }
+.footer-logo-img { height:56px; width:auto; object-fit:contain; margin-bottom:1.25rem; filter:brightness(0) invert(1); opacity:.85; }
+.footer-tagline { font-size:.83rem; line-height:1.75; color:rgba(255,255,255,.45); max-width:280px; }
+.footer-col-title { font-size:.62rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.3); margin-bottom:1rem; }
+.footer-links { list-style:none; display:flex; flex-direction:column; gap:.5rem; }
+.footer-links a { font-size:.85rem; color:rgba(255,255,255,.55); transition:color .15s; }
+.footer-links a:hover { color:rgba(255,255,255,.85); }
+.footer-contact p { font-size:.85rem; color:rgba(255,255,255,.55); line-height:1.7; }
+.footer-contact a { color:rgba(255,255,255,.65); text-decoration:underline; text-underline-offset:2px; }
+.footer-contact a:hover { color:#fff; }
+.footer-bottom { max-width:1200px; margin:3rem auto 0; padding:1.5rem 2rem 0; border-top:1px solid rgba(255,255,255,.08); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:.75rem; font-size:.75rem; color:rgba(255,255,255,.3); }
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+  .offer-grid,.bar-grid{grid-template-columns:1fr 1fr;}
+  .hero{grid-template-columns:1fr; min-height:auto;}
+  .hero-photo{aspect-ratio:16/9; position:relative; min-height:300px;}
+  .hero-photo img{position:absolute;}
+  .story-grid,.events-grid,.visit-grid{grid-template-columns:1fr; gap:2.5rem;}
+  .whatson-grid{grid-template-columns:1fr;}
+  .whatson-wide{grid-column:span 1;}
+  .weekly-strip{grid-template-columns:1fr 1fr;}
+  .story-photo{aspect-ratio:16/9;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  .gallery-grid{grid-template-rows:200px 200px;}
+  .info-strip-inner{grid-template-columns:1fr;}
+  .info-item{border-right:none; border-bottom:1px solid rgba(255,255,255,.08); padding:1.25rem 2rem;}
+  .info-item:last-child{border-bottom:none;}
+  .hh-band-inner{grid-template-columns:1fr;}
+  .hh-cta{flex-direction:row; min-width:auto;}
+  .menu-grid{grid-template-columns:1fr;}
+  .hh-items{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:680px){
+  .wrap,.wrap-sm{padding:0 1.25rem;}
+  .nav-links{display:none;}
+  .bar-grid{grid-template-columns:1fr;}
+  .reviews-grid{grid-template-columns:1fr;}
+  .gallery-grid{grid-template-columns:1fr 1fr; grid-template-rows:180px 180px 180px;}
+  .gallery-item:first-child{grid-row:span 1;}
+  .footer-grid{grid-template-columns:1fr;}
+  .footer-bottom{flex-direction:column; align-items:flex-start;}
+  .hero-btns,.cta-btns{flex-direction:column;}
+  .hh-items{grid-template-columns:1fr;}
+  .menu-tabs{gap:0;}
+  .menu-tab{padding:.7rem 1rem; font-size:.7rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <img src="https://images.squarespace-cdn.com/content/v1/6791c08e6ec38b260eb2e696/fb605b33-6373-48c6-bc41-aadce48e977a/The+Hickory+Spoon+Primary+Logo+%285%29.png?format=300w" alt="The Hickory Spoon" />
+      <div class="nav-logo-text">
+        <span class="nav-logo-name">The Hickory Spoon</span>
+        <span class="nav-logo-sub">Santiam Golf Club · Aumsville, OR</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#bar">Drinks &amp; Bar</a></li>
+      <li><a href="#happyhour">Happy Hour</a></li>
+      <li><a href="#whatson">Events</a></li>
+      <li><a href="#events">Private Events</a></li>
+      <li><a href="#visit">Visit</a></li>
+      <li><a href="tel:+15037691000" class="btn btn-green nav-cta" style="font-size:.72rem; padding:.55rem 1.1rem;">Call Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" style="padding:0;">
+  <div class="hero-text">
+    <div class="eyebrow">The Hickory Spoon · Aumsville, Oregon</div>
+    <h1>A full bar, a <em>real</em> menu, and 18&nbsp;holes out the&nbsp;window.</h1>
+    <p class="hero-lead">The Hickory Spoon started as a little clubhouse kitchen. It grew into one of the best-reviewed restaurants in the valley — open to everyone, golfer or not.</p>
+    <div class="hero-btns">
+      <a href="#menu" class="btn btn-green">View Our Menu</a>
+      <a href="#events" class="btn btn-ghost">Private Events</a>
+    </div>
+    <div class="hero-meta">
+      <div class="hero-meta-row"><strong>Tue – Sat</strong>&nbsp;11am – 8pm&nbsp;·&nbsp;<strong>Sunday</strong>&nbsp;9am – 2pm</div>
+      <div class="hero-meta-row"><strong>8724 Golf Club Rd, Aumsville, OR</strong>&nbsp;·&nbsp;<a href="tel:+15037691000" style="color:var(--copper);">(503) 769-1000</a></div>
+    </div>
+  </div>
+  <div class="hero-photo">
+    <img src="hickoryassets/hero.jpg" alt="The Hickory Spoon dining room" />
+  </div>
+</section>
+
+<!-- INFO STRIP -->
+<div class="info-strip">
+  <div class="info-strip-inner">
+    <div class="info-item">
+      <span class="info-label">Hours</span>
+      <span class="info-value">Tue – Sat, 11am – 8pm</span>
+      <span class="info-sub">Sunday 9am – 2pm · Closed Monday</span>
+    </div>
+    <div class="info-item">
+      <span class="info-label">Location</span>
+      <span class="info-value">8724 Golf Club Rd</span>
+      <span class="info-sub">Aumsville, Oregon 97325</span>
+    </div>
+    <div class="info-item">
+      <span class="info-label">Happy Hour</span>
+      <span class="info-value">2 – 6pm Daily</span>
+      <span class="info-sub">Tue – Sat · Food &amp; drink specials</span>
+    </div>
+  </div>
+</div>
+
+<!-- STORY -->
+<section>
+  <div class="wrap">
+    <div class="story-grid">
+      <div class="story-photo">
+        <img src="hickoryassets/story.jpg" alt="The Hickory Spoon kitchen and dining room" />
+      </div>
+      <div class="story-content">
+        <span class="eyebrow">Our Story</span>
+        <h2>From the clubhouse kitchen to the best table in town.</h2>
+        <p>What started as a small restaurant inside Santiam Golf Club has grown into something much bigger — a full-service restaurant, a serious bar, and a destination for the whole community in the Willamette Valley.</p>
+        <p>We're open to everyone — golfers, families, date nights, and anyone who wants good food with a view. Comfort-driven plates made with care, a bar stocked for the post-round crowd and happy hour regulars alike, and event spaces that host everything from birthday dinners to company gatherings of 200.</p>
+        <div class="story-detail">
+          <p>Families always welcome. Groups of 6 or more are encouraged to call ahead — we'll take care of you.</p>
+        </div>
+        <a href="#menu" class="story-link">Browse the Menu →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HAPPY HOUR -->
+<div class="hh-band" id="happyhour">
+  <div class="hh-band-inner">
+    <div class="hh-left">
+      <span class="eyebrow">Daily Special</span>
+      <h2>Happy Hour</h2>
+      <p>Every Tuesday through Saturday, 2 to 6pm. Food &amp; drink specials that make the post-round wind-down even better.</p>
+      <div class="hh-items">
+        <div class="hh-item">
+          <div class="hh-item-name">Bone-in Wings</div>
+          <div class="hh-item-price">$8</div>
+          <div class="hh-item-desc">Marinated, deep fried, house birdie sauce</div>
+        </div>
+        <div class="hh-item">
+          <div class="hh-item-name">Chi Chi Sliders</div>
+          <div class="hh-item-price">$7</div>
+          <div class="hh-item-desc">2 chicken sliders, birdie sauce, coleslaw</div>
+        </div>
+        <div class="hh-item">
+          <div class="hh-item-name">Steak Tips</div>
+          <div class="hh-item-price">$12</div>
+          <div class="hh-item-desc">Filet, NY &amp; Ribeye, black pepper demi glace</div>
+        </div>
+        <div class="hh-item">
+          <div class="hh-item-name">Breaded Prawns</div>
+          <div class="hh-item-price">$7</div>
+          <div class="hh-item-desc">4 prawns, cocktail sauce</div>
+        </div>
+        <div class="hh-item">
+          <div class="hh-item-name">Cheese Curds</div>
+          <div class="hh-item-price">$7</div>
+          <div class="hh-item-desc">White cheddar, panko breaded, marinara</div>
+        </div>
+        <div class="hh-item">
+          <div class="hh-item-name">Cheesy Bread</div>
+          <div class="hh-item-price">$6</div>
+          <div class="hh-item-desc">French baguette, garlic butter, baked golden</div>
+        </div>
+        <div class="hh-item">
+          <div class="hh-item-name">Onion Rings</div>
+          <div class="hh-item-price">$8</div>
+          <div class="hh-item-desc">Beer battered, house ranch dipping sauce</div>
+        </div>
+        <div class="hh-item">
+          <div class="hh-item-name">Prawn Scampi</div>
+          <div class="hh-item-price">$14</div>
+          <div class="hh-item-desc">5 jumbo prawns, garlic butter, Bearnaise</div>
+        </div>
+        <div class="hh-item">
+          <div class="hh-item-name">Fries or Tots</div>
+          <div class="hh-item-price">$5</div>
+          <div class="hh-item-desc">Fresh cut or tater tots</div>
+        </div>
+      </div>
+      <div class="hh-drinks">
+        <div class="hh-drinks-title">Happy Hour Beverages</div>
+        <div class="hh-drink-row"><span class="hh-drink-name">Well Drink</span><span class="hh-drink-price">$4</span></div>
+        <div class="hh-drink-row"><span class="hh-drink-name">Micro Brews</span><span class="hh-drink-price">$5</span></div>
+        <div class="hh-drink-row"><span class="hh-drink-name">Coors Light</span><span class="hh-drink-price">$3</span></div>
+        <div class="hh-drink-row"><span class="hh-drink-name">Razzy John Daly</span><span class="hh-drink-price">$5</span></div>
+        <div class="hh-drink-row"><span class="hh-drink-name">Water Hazard</span><span class="hh-drink-price">$5</span></div>
+      </div>
+    </div>
+    <div class="hh-cta">
+      <div class="hh-badge">
+        <div class="hh-badge-time">2–6pm</div>
+        <div class="hh-badge-label">Tue – Sat<br>Every Week</div>
+      </div>
+      <a href="tel:+15037691000" class="btn btn-white" style="width:100%; justify-content:center;">(503) 769-1000</a>
+    </div>
+  </div>
+</div>
+
+<!-- FULL MENU -->
+<section class="menu-section" id="menu">
+  <div class="wrap">
+    <div style="text-align:center; margin-bottom:2.5rem;">
+      <span class="eyebrow" style="display:block; margin-bottom:1rem;">Full Menu</span>
+      <h2 style="color:var(--green);">Something for everyone.</h2>
+      <p style="margin-top:.75rem;">Comfort-driven plates made with care. All burgers &amp; sandwiches served with fries, tots, house-made soup, or salad.</p>
+    </div>
+    <div class="menu-tabs" id="menuTabs">
+      <button class="menu-tab active" onclick="showTab('appetizers')">Appetizers</button>
+      <button class="menu-tab" onclick="showTab('burgers')">Burgers &amp; Sandwiches</button>
+      <button class="menu-tab" onclick="showTab('tacos')">Tacos</button>
+      <button class="menu-tab" onclick="showTab('salads')">Salads &amp; Soup</button>
+    </div>
+
+    <!-- APPETIZERS -->
+    <div class="menu-panel active" id="panel-appetizers">
+      <div class="menu-grid">
+        <div class="menu-item featured">
+          <div class="menu-item-header"><span class="menu-item-name">Steak Bites</span><span class="menu-item-price">$16</span></div>
+          <div class="menu-item-desc">Tender cuts of New York strip steak, sautéed in a rich black pepper demi glace.</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-header"><span class="menu-item-name">Tequila Lime Prawns</span><span class="menu-item-price">$16</span></div>
+          <div class="menu-item-desc">(5) grilled gulf prawns topped with a tequila lime butter sauce.</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-header"><span class="menu-item-name">Brussel Sprouts</span><span class="menu-item-price">$15</span></div>
+          <div class="menu-item-desc">Sautéed in a bacon maple and bourbon sauce, topped with feta cheese and onion crunchies.</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-header"><span class="menu-item-name">Bone-in Chicken Wings</span><span class="menu-item-price">$14</span></div>
+          <div class="menu-item-desc">(8) Chicken wings served with carrots, celery and ranch dipping sauce.</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-header"><span class="menu-item-name">French Dip Sliders</span><span class="menu-item-price">$12</span></div>
+          <div class="menu-item-desc">Thin sliced roast beef on toasted buns, with au jus and creamy horseradish sauce.</div>
+          <div class="menu-item-add">Add sautéed mushrooms, onions &amp; Swiss +$3</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-header"><span class="menu-item-name">Coconut Shrimp</span><span class="menu-item-price">$12</span></div>
+          <div class="menu-item-desc">(6) Coconut shrimp served with a sweet sriracha lime sauce.</div>
+          <div class="menu-item-add">Add fries and slaw $5</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-header"><span class="menu-item-name">Sautéed Top Hat Shitake Mushrooms</span><span class="menu-item-price">$12</span></div>
+          <div class="menu-item-desc">Local 'Top Hat' shitake mushrooms sautéed in a garlic chardonnay butter sauce.</div>
+          <div class="menu-item-add">Add grilled prawns $8</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-header"><span class="menu-item-name">Boneless Wings</span><span class="menu-item-price">$12</span></div>
+          <div class="menu-item-desc">Breaded boneless wings tossed in our housemade birdie sauce.</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-header"><span class="menu-item-name">Chicken Tenders</span><span class="menu-item-price">$12</span></div>
+          <div class="menu-item-desc">Breaded chicken tenders, golden fried.</div>
+          <div class="menu-item-add">Add fries and slaw $5</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-header"><span class="menu-item-name">Cheese Curds</span><span class="menu-item-price">$12</span></div>
+          <div class="menu-item-desc">Wisconsin white cheddar cheese curds, breaded and deep fried with chipotle aioli.</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-header"><span class="menu-item-name">Nachos</span><span class="menu-item-price">$12</span></div>
+          <div class="menu-item-desc">Tortilla chips with melted poblano nacho cheese, black beans, topped with pico de gallo.</div>
+          <div class="menu-item-add">Add ground beef or chicken $6 · Add sour cream $1</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-header"><span class="menu-item-name">Toasted Garlic Bread</span><span class="menu-item-price">$12</span></div>
+          <div class="menu-item-desc">French baguette with roasted garlic butter, baked crispy. Served with marinara sauce.</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-header"><span class="menu-item-name">Breaded Shrimp</span><span class="menu-item-price">$10</span></div>
+          <div class="menu-item-desc">(6) Breaded jumbo shrimp, deep fried until golden. Served with cocktail sauce.</div>
+          <div class="menu-item-add">Add fries and slaw $5</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-header"><span class="menu-item-name">Quesadilla</span><span class="menu-item-price">$10</span></div>
+          <div class="menu-item-desc">Grilled flour tortilla with cheddar cheese, salsa and sour cream.</div>
+          <div class="menu-item-add">Add grilled chicken $6</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-header"><span class="menu-item-name">Onion Rings</span><span class="menu-item-price">$9</span></div>
+          <div class="menu-item-desc">Lightly beer battered onion rings, fried crispy while the onion stays sweet and tender.</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-header"><span class="menu-item-name">French Fries or Tator Tots</span><span class="menu-item-price">$7</span></div>
+          <div class="menu-item-desc">Classic fries or crispy tater tots.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BURGERS -->
+    <div class="menu-panel" id="panel-burgers">
+      <p class="menu-note">All items served with your choice of fries, tots, house-made soup, or salad. Sub gluten free bun $1.00</p>
+      <div class="menu-grid">
+        <div class="menu-item featured">
+          <div class="menu-item-header"><span class="menu-item-name">The Hickory Stack</span><span class="menu-item-price">$20</span></div>
+          <div class="menu-item-desc">Big ol' juicy burger with hickory-smoked ham, bacon, cheddar, fresh lettuce, tomato, onion and our bacon-habanero jam.</div>
+        </div>
+        <div class="menu-item featured">
+          <div class="menu-item-header"><span class="menu-item-name">Big George</span><span class="menu-item-price">$19</span></div>
+          <div class="menu-item-desc">Juicy beef patty with crispy bacon, melted cheddar, fresh lettuce, tomato, onion, and our house fry sauce.</div>
+        </div>
+        <div class="menu-item featured">
+          <div class="menu-item-header"><span class="menu-item-name">The Federspiel</span><span class="menu-item-price">$18</span></div>
+          <div class="menu-item-desc">Paying tribute to Fred Federspiel, designer of Santiam Golf Course. Sautéed mushroom and Swiss, fresh lettuce, tomato, onion, house fry sauce.</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-header"><span class="menu-item-name">Club Sandwich</span><span class="menu-item-price">$18</span></div>
+          <div class="menu-item-desc">Triple decker — turkey, ham, crispy bacon, cheddar cheese, fresh lettuce, tomatoes, on toasted bread.</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-header"><span class="menu-item-name">Cheeseburger</span><span class="menu-item-price">$17</span></div>
+          <div class="menu-item-desc">Melty cheddar on a juicy wagyu burger with fresh lettuce, tomato, onion, and our house fry sauce.</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-header"><span class="menu-item-name">Fried Fish Sandwich</span><span class="menu-item-price">$17</span></div>
+          <div class="menu-item-desc">Crispy beer-battered fish fillets on brioche with lettuce, tomato and creamy tartar sauce.</div>
+          <div class="menu-item-add">Add cheese $1.50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-header"><span class="menu-item-name">Lumberjack Dip</span><span class="menu-item-price">$16</span></div>
+          <div class="menu-item-desc">Thin-sliced roast beef on a freshly grilled hoagie, au jus and creamy horseradish sauce.</div>
+          <div class="menu-item-add">Add sautéed mushrooms, onions &amp; Swiss +$2.75</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-header"><span class="menu-item-name">BLT Melt</span><span class="menu-item-price">$16</span></div>
+          <div class="menu-item-desc">Thick, juicy bacon, cheddar, lettuce and tomato on grilled sourdough bread.</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-header"><span class="menu-item-name">Campfire Caesar Wrap</span><span class="menu-item-price">$16</span></div>
+          <div class="menu-item-desc">Grilled chicken, bacon, crisp romaine, shredded parmesan, and creamy Caesar dressing.</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-header"><span class="menu-item-name">Hot Dog</span><span class="menu-item-price">$9</span></div>
+          <div class="menu-item-desc">Classic hot dog on a toasted bun. Relish and chopped onion on request. Just the dog: $7.00</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TACOS -->
+    <div class="menu-panel" id="panel-tacos">
+      <p class="menu-note">2 tacos served with chips &amp; salsa. Choice of corn or flour tortilla.</p>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <div class="menu-item-header"><span class="menu-item-name">Chicken Tacos</span><span class="menu-item-price">$12</span></div>
+          <div class="menu-item-desc">Topped with lettuce, tomato, and cheese. Cilantro and onion on request.</div>
+          <div class="menu-item-add">Add sour cream $1.00</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-header"><span class="menu-item-name">Ground Beef Tacos</span><span class="menu-item-price">$12</span></div>
+          <div class="menu-item-desc">Topped with lettuce, tomato, and cheese. Cilantro and onion on request.</div>
+          <div class="menu-item-add">Add sour cream $1.00</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-header"><span class="menu-item-name">Black Bean &amp; Veggie Tacos</span><span class="menu-item-price">$12</span></div>
+          <div class="menu-item-desc">Topped with lettuce, tomato, and cheese. Cilantro and onion on request.</div>
+          <div class="menu-item-add">Add sour cream $1.00</div>
+        </div>
+        <div class="menu-item featured">
+          <div class="menu-item-header"><span class="menu-item-name">Grilled Shrimp Tacos</span><span class="menu-item-price">$14</span></div>
+          <div class="menu-item-desc">Topped with cabbage, chipotle aioli, pico de gallo &amp; queso fresco.</div>
+        </div>
+        <div class="menu-item featured">
+          <div class="menu-item-header"><span class="menu-item-name">Fried Alaskan Cod Tacos</span><span class="menu-item-price">$14</span></div>
+          <div class="menu-item-desc">Topped with cabbage, chipotle aioli, pico de gallo &amp; queso fresco.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SALADS & SOUP -->
+    <div class="menu-panel" id="panel-salads">
+      <p class="menu-note">House-made dressings: Buttermilk Ranch, Blue Cheese, Thousand Island, Honey Mustard, Poppyseed Vinaigrette, Italian, or Balsamic Vinaigrette. Add garlic bread $4.</p>
+      <div class="menu-grid">
+        <div class="menu-item featured">
+          <div class="menu-item-header"><span class="menu-item-name">Lumber-Jacqueline</span><span class="menu-item-price">$20</span></div>
+          <div class="menu-item-desc">House spring mix, carrots, cucumbers, craisins, bacon, gorgonzola crumbles, crispy onion straws, and a tender sliced 6 oz NY steak.</div>
+        </div>
+        <div class="menu-item featured">
+          <div class="menu-item-header"><span class="menu-item-name">Fairway Harvest Salad</span><span class="menu-item-price">$17</span></div>
+          <div class="menu-item-desc">Grilled chicken over fresh romaine with blue cheese crumbles, candied walnuts, craisins, and house-made poppyseed vinaigrette.</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-header"><span class="menu-item-name">Taco Salad</span><span class="menu-item-price">$16</span></div>
+          <div class="menu-item-desc">Edible tostada bowl with lettuce, black beans, cheese, tomatoes, pico de gallo, tortilla strips and sour cream.</div>
+          <div class="menu-item-add">Add ground beef or chicken $6</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-header"><span class="menu-item-name">American Summer Salad</span><span class="menu-item-price">$16</span></div>
+          <div class="menu-item-desc">Hickory-smoked ham, turkey, hard boiled egg, tomatoes, cucumbers, cheddar, and bacon over our house salad mix.</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-header"><span class="menu-item-name">Caesar</span><span class="menu-item-price">$12</span></div>
+          <div class="menu-item-desc">Fresh romaine, parmesan cheese and croutons in Caesar dressing with a lemon wedge.</div>
+          <div class="menu-item-add">Grilled chicken +$6 · Gulf prawns (3) +$8 · 6 oz NY steak +$8</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-header"><span class="menu-item-name">House Salad</span><span class="menu-item-price">$7</span></div>
+          <div class="menu-item-desc">House spring mix with carrot, cucumber, croutons, and your choice of dressing on the side.</div>
+          <div class="menu-item-add">Add bacon and cheddar $1.00</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-header"><span class="menu-item-name">Soup of the Day</span><span class="menu-item-price">Bowl $8 / Cup $6</span></div>
+          <div class="menu-item-desc">Always made in-house. Ask your server for today's selection.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BAR & DRINKS -->
+<section class="bar-section" id="bar">
+  <div class="wrap">
+    <div class="bar-header">
+      <span class="eyebrow">Bar &amp; Drinks</span>
+      <h2>Oregon on tap. Willamette Valley in the glass.</h2>
+      <p>A full bar built for post-round winding down, date nights, and serious happy hour regulars. Local craft beer, Guinness on nitro, Oregon and Washington wine, and a lineup of cocktails made with Pacific Northwest spirits.</p>
+    </div>
+    <div class="bar-grid">
+      <div class="bar-card">
+        <div class="bar-card-title">Signature Cocktails</div>
+        <div class="bar-item">
+          <div class="bar-item-name">Classic Margarita</div>
+          <div class="bar-item-desc">Hornitos Silver or Reposado</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-item-name">Marionberry Lemon Drop</div>
+          <div class="bar-item-desc">Wild Roots Marionberry Vodka</div>
+          <div class="bar-item-source">Oregon craft spirit</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-item-name">Old Fashioned</div>
+          <div class="bar-item-desc">Buffalo Trace / Makers Mark / Pendleton</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-item-name">Moscow Mule</div>
+          <div class="bar-item-desc">Abiqua Spirit Vodka, Ginger Beer, Lime, Mint</div>
+          <div class="bar-item-source">Oregon craft spirit</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-item-name">John Daly</div>
+          <div class="bar-item-desc">Abiqua Spirit Vodka, Lemonade, Iced Tea</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-item-name">Transfusion</div>
+          <div class="bar-item-desc">Abiqua Spirit Vodka, Grape Juice, Ginger Ale</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-item-name">Orange Creamsicle</div>
+          <div class="bar-item-desc">Whipped Vodka, Triple Sec, Orange Juice, Half &amp; Half</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-item-name">The Boedigheimer</div>
+          <div class="bar-item-desc">Irish Cream, Hazelnut &amp; Coffee Liquor, Coffee — iced or hot</div>
+        </div>
+      </div>
+      <div class="bar-card">
+        <div class="bar-card-title">Draft Beer — Oregon &amp; Beyond</div>
+        <div class="bar-item">
+          <div class="bar-item-name">Guinness on Nitro</div>
+          <div class="bar-item-desc">The real thing, properly poured</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-item-name">Oregon Sunshine</div>
+          <div class="bar-item-source">Silver Falls Brewing · Silverton, OR</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-item-name">RPM IPA</div>
+          <div class="bar-item-source">Boneyard Brewery · Bend, OR</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-item-name">Kiwanda Cream Ale</div>
+          <div class="bar-item-source">Pelican Brewing</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-item-name">Paddle Me</div>
+          <div class="bar-item-source">Calapooya Brewing</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-item-name">Cast Out</div>
+          <div class="bar-item-source">Crux Fermentation</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-item-name">Coors Light</div>
+          <div class="bar-item-desc">The classic</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-item-name">+ 2 Rotating Taps</div>
+          <div class="bar-item-desc">Ask your server for what's on now</div>
+        </div>
+      </div>
+      <div class="bar-card">
+        <div class="bar-card-title">Wine — Willamette Valley &amp; Beyond</div>
+        <div class="bar-item">
+          <div class="bar-item-name">Pinot Gris</div>
+          <div class="bar-item-source">Willamette Valley Vineyards · Turner, OR</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-item-name">Whole Cluster Rosé</div>
+          <div class="bar-item-source">Willamette Valley Vineyards · Turner, OR</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-item-name">Founders Reserve Pinot Noir</div>
+          <div class="bar-item-source">Willamette Vineyards · Turner, OR</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-item-name">Whole Cluster Pinot Noir</div>
+          <div class="bar-item-source">Willamette Valley Vineyards · Turner, OR</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-item-name">Gamey Noir</div>
+          <div class="bar-item-source">Ridge Runner · Silverback · Silverton, OR</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-item-name">Cabernet Sauvignon</div>
+          <div class="bar-item-source">Goose Ridge · Columbia Valley, WA</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-item-name">Riesling</div>
+          <div class="bar-item-source">Willamette Valley Vineyards · Turner, OR</div>
+        </div>
+        <p class="wine-note">Full wine list available — ask your server. Cider, White Claw, and High Noon also available.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<div class="quote-band">
+  <div class="wrap-sm">
+    <span class="quote-stars">★ ★ ★ ★ ★</span>
+    <blockquote>Best restaurant in the area by a mile. The food is genuinely great, the staff remembers your name, and the view of the course makes every meal feel like a treat.</blockquote>
+    <p class="quote-source">Google Review · Aumsville, Oregon</p>
+  </div>
+</div>
+
+<!-- GALLERY -->
+<section>
+  <div class="wrap">
+    <div style="margin-bottom:2rem;">
+      <span class="eyebrow" style="display:block; margin-bottom:.75rem;">The Space</span>
+      <h2 style="color:var(--green);">Come see it for yourself.</h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="hickoryassets/ai-1.png" alt="The Hickory Spoon" /></div>
+      <div class="gallery-item"><img src="hickoryassets/20251010_112313.webp" alt="Golf course view" /></div>
+      <div class="gallery-item"><img src="hickoryassets/ai-4.png" alt="Bar and cocktails" /></div>
+      <div class="gallery-item"><img src="hickoryassets/ai-2.png" alt="Food" /></div>
+      <div class="gallery-item"><img src="hickoryassets/ai-3.png" alt="Event space" /></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S ON -->
+<section class="whatson-section" id="whatson">
+  <div class="wrap">
+    <span class="eyebrow" style="display:block;margin-bottom:1rem;">Events &amp; Happenings</span>
+    <h2>What's On at The Hickory Spoon</h2>
+    <p class="whatson-intro">From lazy Sunday brunches to live bingo nights, there's always something worth showing up for.</p>
+
+    <div class="whatson-grid">
+
+      <!-- Featured: Music Bingo Night -->
+      <div class="event-card event-card-accent whatson-wide">
+        <div class="event-card-header">
+          <span class="event-tag event-tag-featured">Featured Event</span>
+          <div class="event-card-title">Music Bingo Night</div>
+          <div class="event-card-date">Last Thursday of Each Month · Doors open at 6pm</div>
+        </div>
+        <div class="event-card-body">
+          <p class="event-card-desc">Bingo — but instead of numbers, we play songs. Two rounds, cash prizes, and a crowd that gets into it. $5 buy-in per round.</p>
+          <ul class="event-detail-list">
+            <li>Round 1: Country Classics</li>
+            <li>Round 2: Surprise Round</li>
+            <li>Winners receive a cash prize</li>
+            <li>Next date: Thursday, April 30th</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Prime Rib -->
+      <div class="event-card">
+        <div class="event-card-header">
+          <span class="event-tag event-tag-recurring">Weekly</span>
+          <div class="event-card-title">Prime Rib Night</div>
+          <div class="event-card-date">Every Friday &amp; Saturday · Starting at 4pm</div>
+        </div>
+        <div class="event-card-body">
+          <p class="event-card-desc">Hand-cut, slow-roasted prime rib — served every Friday and Saturday evening until we run out. Come early.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Weekly strip -->
+    <div class="weekly-strip">
+      <div class="weekly-item">
+        <div class="weekly-day">Every Sunday</div>
+        <div class="weekly-name">Sunday Brunch</div>
+        <div class="weekly-detail">9am – 2pm</div>
+      </div>
+      <div class="weekly-item">
+        <div class="weekly-day">Tue – Sat</div>
+        <div class="weekly-name">Happy Hour</div>
+        <div class="weekly-detail">2 – 5pm daily</div>
+      </div>
+      <div class="weekly-item">
+        <div class="weekly-day">Fri &amp; Sat</div>
+        <div class="weekly-name">Prime Rib</div>
+        <div class="weekly-detail">Available from 4pm</div>
+      </div>
+      <div class="weekly-item">
+        <div class="weekly-day">Every Monday</div>
+        <div class="weekly-name">Private Events</div>
+        <div class="weekly-detail">Closed to public</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section class="events-section" id="events">
+  <div class="wrap">
+    <div class="events-grid">
+      <div class="events-photo"><img src="hickoryassets/events.webp" alt="Private events at The Hickory Spoon" /></div>
+      <div class="events-content">
+        <span class="eyebrow">Private Events &amp; Catering</span>
+        <h2>Your event, on one of the most scenic properties in the valley.</h2>
+        <p>We've hosted company dinners, birthday celebrations, golf group gatherings, wedding receptions, and everything in between. Four spaces, one venue, full restaurant and bar support.</p>
+        <div class="events-spaces">
+          <div class="space-row"><span class="space-name">Banquet Room</span><span class="space-desc">Large groups, seated dinner</span></div>
+          <div class="space-row"><span class="space-name">The Sun Room</span><span class="space-desc">Intimate, bright, overlooking the course</span></div>
+          <div class="space-row"><span class="space-name">Main Dining Room</span><span class="space-desc">Full restaurant buyout available</span></div>
+          <div class="space-row"><span class="space-name">Outdoor Pavilion</span><span class="space-desc">Brand new · open-air gatherings</span></div>
+        </div>
+        <div class="events-btns">
+          <a href="tel:+15037691000" class="btn btn-white">Call to Book: (503) 769-1000</a>
+          <a href="mailto:hickoryspoon@gmail.com" class="btn btn-owh">Email Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-section">
+  <div class="wrap">
+    <div style="text-align:center; margin-bottom:3rem;">
+      <span class="eyebrow" style="display:block; margin-bottom:1rem;">What People Are Saying</span>
+      <h2 style="color:var(--green);">The best-reviewed spot around.</h2>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">The food is fantastic and the atmosphere is warm and welcoming. Felt like a hidden gem the moment we walked in — we'll definitely be back.</p>
+        <p class="review-author">— Google Review</p>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Our company holiday party was hosted here and the staff went above and beyond. The food was excellent, the space was beautiful, and every detail was handled perfectly.</p>
+        <p class="review-author">— Google Review</p>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Didn't expect to find a restaurant this good inside a golf club. The view is stunning, the burgers are incredible, and happy hour is a steal. This is our new regular spot.</p>
+        <p class="review-author">— Google Review</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section id="visit">
+  <div class="wrap">
+    <div class="visit-grid">
+      <div class="visit-content">
+        <span class="eyebrow">Find Us</span>
+        <h2>Right on the course. Easy to find.</h2>
+        <p>We're inside Santiam Golf Club in Aumsville — about 15 minutes southeast of Salem, with plenty of parking on site. Golfers, neighbors, and first-timers all end up becoming regulars.</p>
+        <table class="hours-table">
+          <tbody>
+            <tr><td>Tuesday – Saturday</td><td>11:00 am – 8:00 pm</td></tr>
+            <tr><td>Sunday</td><td>9:00 am – 2:00 pm</td></tr>
+            <tr><td>Monday</td><td>Closed</td></tr>
+          </tbody>
+        </table>
+        <p class="hours-note">Hours subject to change — call ahead to confirm for holidays and special events.</p>
+      </div>
+      <div class="visit-card">
+        <div class="visit-map-placeholder">
+          <img src="hickoryassets/exterior.webp" alt="Santiam Golf Club" />
+          <a href="https://maps.google.com/?q=8724+Golf+Club+Rd+Aumsville+OR+97325" target="_blank" class="visit-map-link">Open in Google Maps →</a>
+        </div>
+        <div class="visit-details">
+          <div class="visit-row">
+            <span class="visit-row-label">Address</span>
+            <span class="visit-row-value"><a href="https://maps.google.com/?q=8724+Golf+Club+Rd+Aumsville+OR+97325" target="_blank">8724 Golf Club Rd<br>Aumsville, OR 97325</a></span>
+          </div>
+          <div class="visit-sep"></div>
+          <div class="visit-row">
+            <span class="visit-row-label">Phone</span>
+            <span class="visit-row-value"><a href="tel:+15037691000">(503) 769-1000</a></span>
+          </div>
+          <div class="visit-sep"></div>
+          <div class="visit-row">
+            <span class="visit-row-label">Email</span>
+            <span class="visit-row-value"><a href="mailto:hickoryspoon@gmail.com">hickoryspoon@gmail.com</a></span>
+          </div>
+          <div class="visit-actions">
+            <a href="https://maps.google.com/?q=8724+Golf+Club+Rd+Aumsville+OR+97325" target="_blank" class="btn btn-white">Get Directions</a>
+            <a href="tel:+15037691000" class="btn btn-owh">Call (503) 769-1000</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="wrap">
+    <span class="eyebrow">Santiam Golf Club · Aumsville, Oregon</span>
+    <h2>Good food, great people, and one of the best views in Aumsville.</h2>
+    <p>Whether you're planning an event or just grabbing dinner after 18 holes — we'd love to see you.</p>
+    <div class="cta-btns">
+      <a href="tel:+15037691000" class="btn btn-green">Call (503) 769-1000</a>
+      <a href="mailto:hickoryspoon@gmail.com" class="btn btn-ghost">Send Us a Message</a>
+      <a href="https://maps.google.com/?q=8724+Golf+Club+Rd+Aumsville+OR+97325" target="_blank" class="btn btn-ghost">Get Directions</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <img class="footer-logo-img" src="https://images.squarespace-cdn.com/content/v1/6791c08e6ec38b260eb2e696/fb605b33-6373-48c6-bc41-aadce48e977a/The+Hickory+Spoon+Primary+Logo+%285%29.png?format=300w" alt="The Hickory Spoon" />
+      <p class="footer-tagline">A full-service restaurant, bar, and event venue on the grounds of Santiam Golf Club. Open to everyone — golfer or not.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Navigate</div>
+      <ul class="footer-links">
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#bar">Drinks &amp; Bar</a></li>
+        <li><a href="#happyhour">Happy Hour</a></li>
+        <li><a href="#whatson">Events</a></li>
+        <li><a href="#events">Private Events</a></li>
+        <li><a href="#events">Catering</a></li>
+        <li><a href="#visit">Visit Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Hours</div>
+      <div class="footer-contact">
+        <p>Tuesday – Saturday<br>11:00 am – 8:00 pm</p>
+        <p style="margin-top:.6rem;">Sunday<br>9:00 am – 2:00 pm</p>
+        <p style="margin-top:.6rem; color:rgba(255,255,255,.3);">Monday · Closed</p>
+        <p style="margin-top:.75rem;">Happy Hour: 2–6pm<br>Tue – Sat</p>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <div class="footer-contact">
+        <p><a href="tel:+15037691000">(503) 769-1000</a></p>
+        <p style="margin-top:.5rem;"><a href="mailto:hickoryspoon@gmail.com">hickoryspoon@gmail.com</a></p>
+        <p style="margin-top:.75rem;"><a href="https://maps.google.com/?q=8724+Golf+Club+Rd+Aumsville+OR+97325" target="_blank">8724 Golf Club Rd<br>Aumsville, OR 97325</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 The Hickory Spoon at Santiam Golf Club · Aumsville, Oregon</span>
+    <span><a href="https://santiamgolfclub.com" target="_blank" style="color:rgba(255,255,255,.3);">Santiam Golf Club</a></span>
+  </div>
+</footer>
+
+<script>
+function showTab(tab) {
+  document.querySelectorAll('.menu-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.menu-panel').forEach(p => p.classList.remove('active'));
+  document.querySelector('[onclick="showTab(\'' + tab + '\')"]').classList.add('active');
+  document.getElementById('panel-' + tab).classList.add('active');
+}
+</script>
+</body>
+</html>
